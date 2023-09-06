@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsl(30, 38%, 92%);
+}
+.outer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  gap: 14px;
+
+}
+.container {
+  width: 54vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+.image {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  overflow: hidden;
+}
+.image .desktop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+.image .mobile-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+  display: none;
+}
+.content {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  padding: 20px;
+  margin: 20px;
+}
+
+.content .product-type {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: hsl(228, 12%, 48%);
+}
+.content .title {
+  font-family: "Fraunces";
+  font-size: 35px;
+  margin-bottom: 25px;
+  padding-right: 45px;
+  line-height: 1;
+  color: hsl(212, 21%, 14%);
+}
+.content .body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.content .price {
+  margin-bottom: 30px;
+}
+.content .price .new-price {
+  font-family: "Fraunces";
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  font-size: 30px;
+  margin-right: 15px;
+}
+.content .price .old-price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  position: relative;
+  vertical-align:top;
+  bottom: -10px;
+}
+.content button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 3.3rem;
+  padding: 15px 30px;
+  background: hsl(158, 36%, 37%);
+  cursor: pointer;
+}
+.content button .icon {
+  padding-right: 10px;
+  vertical-align:middle;
+}
+.content button:hover {
+  background: hsl(212, 21%, 14%);
+}
+
+.attribution {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 10px;
+  color: hsl(228, 12%, 48%);
+}
+.attribution a {
+  text-decoration: none;
+}
+
+
+@media screen and (max-width:937px) {
+
+.container {
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 1fr;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+
+}
+.image {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+.content {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+.image .desktop-img{
+  display: none;
+}
+.image .mobile-img{
+  display:block;
+}
+}
